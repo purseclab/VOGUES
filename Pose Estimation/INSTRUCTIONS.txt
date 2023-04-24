@@ -1,0 +1,18 @@
+In AlphaPose directory, run:
+python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x-simple.yaml --checkpoint pretrained_models/simple_res50_256x192.pth --indir examples/demo/ --vis
+
+SAMPLE SCRIPTS:
+./scripts/inference.sh pretrained_models/simple_res50_256x192.pth SecurityCam3.mov ./out
+
+python3 scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x-simple.yaml  --checkpoint pretrained_models/simple_res50_256x192.pth --video SecurityCam3.mov --outdir ./out --detector yolo  --save_img --save_video
+
+python3 scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x-simple.yaml  --checkpoint pretrained_models/simple_res50_256x192.pth --video C:\Users\raymo\Downloads\data\processed\surveillance\8.mp4 --outdir ./out --detector yolo  --save_img --save_video
+
+ATTACK:
+python3 scripts/demo_inference_attackv2.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x-simple.yaml  --checkpoint pretrained_models/simple_res50_256x192.pth --video SCUnp.mov --outdir ./out --detector yolo  --save_img --save_video --showbox
+
+testing on an image
+python3 scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x-simple.yaml  --checkpoint pretrained_models/simple_res50_256x192.pth --image repframe.jpg --outdir ./out --detector yolo  --save_img --save_video
+
+
+python3 scripts/demo_make_dataset.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x-simple.yaml  --checkpoint pretrained_models/simple_res50_256x192.pth --video walk.avi --outdir ./out --detector yolo
