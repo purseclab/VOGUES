@@ -1,5 +1,0 @@
-To run (at least I think):
-python3 demo.py --video-input ./bdda_test/1.mp4 --output ./out --opts MODEL.WEIGHTS ../output/model_final.pth
-
-direct to video:
-python3 demo.py --video-input ./bdda_test/1.mp4 --opts MODEL.WEIGHTS ../output/model_final.pth
