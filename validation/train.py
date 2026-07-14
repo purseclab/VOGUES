@@ -11,11 +11,11 @@ import utils
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_path', type=str, required=True, help='Path to JSON of valid pose data')
+    parser.add_argument('--data_path', type=str, required=True, help='Path to valid training JSON')
     parser.add_argument('--model_save_path', type=str, default='one_class_lstm.pth')
     parser.add_argument('--hidden_dim', type=int, default=64)
     parser.add_argument('--batch_size', type=int, default=16)
-    parser.add_argument('--num_epochs', type=int, default=30)
+    parser.add_argument('--num_epochs', type=int, default=50)
     parser.add_argument('--learning_rate', type=float, default=0.001)
     parser.add_argument('--weight_decay', type=float, default=1e-5)
     args = parser.parse_args()
